@@ -1,0 +1,12 @@
+# ninja log v5
+38	967	6811885062111611	CMakeFiles/vai_p_caralho_git.dir/MIs/Edge.cpp.obj	310b655b7b5e49c7
+9	1414	6811885066751617	CMakeFiles/vai_p_caralho_git.dir/MIs/Cluster.cpp.obj	695ecf60b03e3adb
+47	1417	6811885066631620	CMakeFiles/vai_p_caralho_git.dir/MIs/Node.cpp.obj	75167ec64efb2434
+15	1510	6811885067711616	CMakeFiles/vai_p_caralho_git.dir/MIs/GraphKruskal.cpp.obj	d408a089e7780801
+79	1698	6811885069831616	CMakeFiles/vai_p_caralho_git.dir/main.cpp.obj	38a6da7ea6eff9ef
+1	1773	6811885070631685	CMakeFiles/vai_p_caralho_git.dir/MIs/Clustering.cpp.obj	2429df06bc0261d8
+66	1779	6811885070751608	CMakeFiles/vai_p_caralho_git.dir/MIs/Menu.cpp.obj	3d65e86ac8b9044
+72	1844	6811885071431609	CMakeFiles/vai_p_caralho_git.dir/MIs/PrintDOT.cpp.obj	4552d496508632dc
+53	3314	6811885086039744	CMakeFiles/vai_p_caralho_git.dir/MIs/GraphPrim.cpp.obj	ccb79e78504c3e3f
+22	3590	6811885088880021	CMakeFiles/vai_p_caralho_git.dir/MIs/Graph.cpp.obj	a16c1f7c2acb00b0
+3591	4016	6811885093079709	vai_p_caralho_git.exe	870cea91719de530
