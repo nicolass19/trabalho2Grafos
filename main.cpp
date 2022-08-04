@@ -5,7 +5,7 @@
 #include "Headers/Graph.h"
 #include "Headers/Menu.h"
 
-vector<EdgeStruct>* readTxt(const string& path, bool isWeighted, bool isWeightedNode);
+vector<EdgeStruct>* readTxt(Graph* graph, const string& path, bool isWeighted, bool isWeightedNode);
 vector<EdgeStruct>* loadGraph(Graph* graph, const string& inputFilePath,bool isWeightedEdge, bool isWeightedNode);
 void printGraph(Graph* grafo, vector<EdgeStruct>* ListEdge);
 
@@ -89,8 +89,8 @@ int main(int argc, char** argv) {
     bool isWeightedEdge = stoi(argv[4]);
     bool isWeightedNode = stoi(argv[5]);*/
 
-    string inputFilePath = "../GrafoCCP2.txt";
-    string outputFilePath = "../OutputCCP.txt";
+    string inputFilePath = "../RanReal240_01.txt";
+    string outputFilePath = "../OutputCCP2.txt";
     bool isDirected = false;
     bool isWeightedEdge = true;
     bool isWeightedNode = true;
@@ -101,15 +101,15 @@ int main(int argc, char** argv) {
 
     Menu* menu = new Menu(grafo, outputFilePath);
     menu->printEdgeFromGraph(grafo);
-    menu->start();
+    //menu->start();
 
-    Cluster* s = grafo->agmGuloso(3);
+    Cluster* s = grafo->agmGuloso();
 
     return 0;
 }
 
 vector<EdgeStruct>* loadGraph(Graph* graph, const string& inputFilePath, bool isWeighted, bool isWeightedNode){
-    auto ListEdge = readTxt(inputFilePath, isWeighted, isWeightedNode);
+    auto ListEdge = readTxt(graph, inputFilePath, isWeighted, isWeightedNode);
     string edgeShape = graph->getDirected() ? "->" : "--";
 
     if(isWeighted) {
@@ -127,7 +127,7 @@ vector<EdgeStruct>* loadGraph(Graph* graph, const string& inputFilePath, bool is
     return ListEdge;
 }
 
-vector<EdgeStruct>* readTxt(const string& path, bool isWeighted, bool isWeightedNode){
+vector<EdgeStruct>* readTxt(Graph* graph, const string& path, bool isWeighted, bool isWeightedNode){
     try {
         auto ListEdge = new vector<EdgeStruct>();
 
@@ -150,50 +150,42 @@ vector<EdgeStruct>* readTxt(const string& path, bool isWeighted, bool isWeighted
 
             int order = stoi(auxOrder);
             int numClusters = stoi(n);
-            int* lowerLimit = new int[numClusters];
-            int* higherLimit = new int[numClusters];
+            float* lowerLimit = new float[numClusters];
+            float* higherLimit = new float[numClusters];
             string centinel;
 
             string aux;
             int i = 0, j = 0;
             getline(header, aux, ' ');
-            while(aux != "W"){
+            while(aux != "W"){ ///ler limites
                 if(i % 2 == 0) {
-                    lowerLimit[j] = stoi(aux);
+                    lowerLimit[j] = stof(aux);
                 }
                 else {
-                    higherLimit[j] = stoi(aux);
+                    higherLimit[j] = stof(aux);
                     j++;
                 }
                 i++;
                 getline(header, aux, ' ');
             }
             centinel = aux;
-            cout << "Ordem: " << order << endl;
-            cout << "Numero de clusters: " << numClusters << endl;
-            cout << "ClusterType: " << clusterType << endl;
-            cout << "Centinel: " << centinel << endl;
-            cout << "Limites: ";
 
-            for (int k = 0; k < numClusters; k++) {
-                cout << lowerLimit[k] << "-" << higherLimit[k] << " ";
-            }
-            cout << endl;
-
+            float *nodeWeights = new float[order];
+            ///ler pesos dos nos
             if (isWeightedNode) {
-                float *nodeWeights = new float[numClusters];
-                cout << "Peso dos nos: ";
+                //cout << "Peso dos nos: ";
                 getline(header, line, ' ');
                 for (int k = 0; k < order; ++k) {
                     nodeWeights[k] = stof(line);
-                    cout << nodeWeights[k] << " ";
                     getline(header, line, ' ');
                 }
-                cout << endl << endl;
+                //cout << endl << endl;
             }
+
             ///ler o grafo
             auto edge = EdgeStruct();
             string toNode, fromNode, weight;
+
             while (getline(file, line)){
 
                 stringstream ss(line);
@@ -211,6 +203,32 @@ vector<EdgeStruct>* readTxt(const string& path, bool isWeighted, bool isWeighted
 
                 ListEdge->push_back(edge);
             }
+
+            graph->setNumClusters(numClusters);
+            graph->setClusterType(clusterType);
+            graph->setLowerLimits(lowerLimit);
+            graph->setHigherLimits(higherLimit);
+            graph->setNodeWeights(nodeWeights);
+            ///TESTES
+            cout << "Ordem: " << order << endl;
+            cout << "Numero de clusters: " << graph->getNumClusters() << endl;
+            cout << "ClusterType: " << graph->getClusterType() << endl;
+            cout << "Centinel: " << centinel << endl;
+
+            float* l = graph->getLowerLimits();
+            float* h = graph->getHigherLimits();
+            float* nw = graph->getNodeWeights();
+            cout << "Limites: ";
+            for (int k = 0; k < numClusters; k++) {
+                cout << l[k] << "-" << h[k] << " ";
+            }
+            cout << endl;
+            cout << "Peso dos nos: ";
+            for (int k = 0; k < order; ++k) {
+                cout << nw[k] << " ";
+            }
+            cout << endl << endl;
+
 
             return ListEdge;
         }else{

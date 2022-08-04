@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="vai_p_caralho_git"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vai_p_caralho_git">
+				<Option output="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/vai_p_caralho_git.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/Headers"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 vai_p_caralho_git"/>
+					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vai_p_caralho_git/fast">
+				<Option output="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/vai_p_caralho_git.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/Headers"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 vai_p_caralho_git/fast"/>
+					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/Headers/Cluster.h">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/Headers/ClusterNode.h">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/Headers/Edge.h">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/Headers/Graph.h">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/Headers/GraphKruskal.h">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/Headers/GraphPrim.h">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/Headers/Menu.h">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/Headers/Node.h">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/MIs/Cluster.cpp">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/MIs/Clustering.cpp">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/MIs/Edge.cpp">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/MIs/Graph.cpp">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/MIs/GraphKruskal.cpp">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/MIs/GraphPrim.cpp">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/MIs/Menu.cpp">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/MIs/Node.cpp">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/MIs/PrintDOT.cpp">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/main.cpp">
+			<Option target="vai_p_caralho_git"/>
+		</Unit>
+		<Unit filename="C:/Users/Marcos Paulo/Desktop/Nova pasta/trabalho2Grafos/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

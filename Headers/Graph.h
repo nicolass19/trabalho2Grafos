@@ -10,7 +10,7 @@
 #include "Edge.h"
 #include "Cluster.h"
 
-struct NodeStruct{
+/*struct NodeStruct{
     int id;
     string external_id; //necessario?
     float weight;
@@ -26,7 +26,7 @@ struct NodeStruct{
         this->numEdges = numEdges;
         this->value = sumEdgesWeights + weight - numEdges;
     }
-};
+};*/
 
 struct MinimalPathResult {
     vector<int>* path;
@@ -73,6 +73,12 @@ private:
     Node* last_node;
     string* mapInternalIdToExternalId;
 
+    float* lowerLimits;
+    float* higherLimits;
+    float* nodeWeights;
+    int numClusters;
+    string clusterType;
+
 public:
 
     //Construtor
@@ -92,7 +98,18 @@ public:
     Node* getNodeFromExternalId(const string& id_external);
     Node* getLastNode();
     string getExternalId(int id);
+    float *getLowerLimits() const;
+    void setLowerLimits(float *lowerLimits);
+    float *getHigherLimits() const;
+    void setHigherLimits(float *higherLimits);
+    float *getNodeWeights() const;
+    void setNodeWeights(float *nodeWeights);
+    int getNumClusters() const;
+    void setNumClusters(int numClusters);
 
+    const string &getClusterType() const;
+
+    void setClusterType(const string &clusterType);
 
     void indexId();
     void insertEdge(const string& id_external, const string& target_id_external, float weight);
@@ -129,8 +146,8 @@ public:
     vector<EdgeStruct> caminhoProfundidade(const string& id, int* visited);
 
     ///CCP
-    vector<NodeStruct> orderVertices(Graph *graph);
-    Cluster* agmGuloso(const int& numClusters);
+    vector<ClusterNode> orderVertices();
+    Cluster* agmGuloso();
 
 private:
 

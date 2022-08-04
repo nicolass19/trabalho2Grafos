@@ -75,6 +75,17 @@ int Graph::getInsertionPosition() {
     return aux;
 }
 
+float *Graph::getLowerLimits() const {return lowerLimits;}
+void Graph::setLowerLimits(float *lowerLimits) {Graph::lowerLimits = lowerLimits;}
+float *Graph::getHigherLimits() const {return higherLimits;}
+void Graph::setHigherLimits(float *higherLimits) {Graph::higherLimits = higherLimits;}
+float *Graph::getNodeWeights() const {return nodeWeights;}
+void Graph::setNodeWeights(float *nodeWeights) {Graph::nodeWeights = nodeWeights;}
+int Graph::getNumClusters() const {return numClusters;}
+void Graph::setNumClusters(int numClusters) {Graph::numClusters = numClusters;}
+const string &Graph::getClusterType() const {return clusterType;}
+void Graph::setClusterType(const string &clusterType) {Graph::clusterType = clusterType;}
+
 Node* Graph::insertNode(string id_external)
 {
     auto node = new Node(this->getInsertionPosition(), move(id_external));
@@ -96,12 +107,14 @@ void Graph::insertEdge(const string& id_external, const string& target_id_extern
     if(source_node == nullptr)
     {
         source_node = this->insertNode(id_external);
-        //if(this->weighted_node)
-            //source_node->setWeight();
+        if(this->weighted_node)
+            source_node->setWeight(this->nodeWeights[stoi(id_external)]);
     }
     if(target_node == nullptr)
     {
         target_node = this->insertNode(target_id_external);
+        if(this->weighted_node)
+            target_node->setWeight(this->nodeWeights[stoi(target_id_external)]);
     }
 
     this->insertEdge(source_node, target_node, weight);

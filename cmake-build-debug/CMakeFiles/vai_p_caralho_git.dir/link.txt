@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\vai_p_caralho_git.dir/objects.a
+"C:\PROGRA~1\JetBrains\CLion 2022.1.1\bin\mingw\bin\ar.exe" qc CMakeFiles\vai_p_caralho_git.dir/objects.a @CMakeFiles\vai_p_caralho_git.dir\objects1.rsp
+"C:\PROGRA~1\JetBrains\CLion 2022.1.1\bin\mingw\bin\g++.exe" -g -Wl,--whole-archive CMakeFiles\vai_p_caralho_git.dir/objects.a -Wl,--no-whole-archive -o vai_p_caralho_git.exe -Wl,--out-implib,libvai_p_caralho_git.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\vai_p_caralho_git.dir\linklibs.rsp

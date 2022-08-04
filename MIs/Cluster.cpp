@@ -7,14 +7,18 @@
 
 Cluster::Cluster()
 {
-    primeiro = NULL;
+    primeiro = nullptr;
+    lowerLimit = -1;
+    higherLimit = -1;
+    actualLimit = 0;
+    sumEdges = 0;
 }
 
 Cluster::~Cluster()
 {
-    No *p = primeiro;
+    ClusterNode *p = primeiro;
 
-    while(p != NULL)
+    while(p != nullptr)
     {
         primeiro = primeiro->getProx();
         delete p;
@@ -24,23 +28,23 @@ Cluster::~Cluster()
 
 void Cluster::insereInicio(int val)
 {
-    ///insere um novo nó no inicio da lista com valor val
 
-    No *p = new No();
-    p->setInfo(val);
+    ClusterNode *p = new ClusterNode();
     p->setProx(primeiro);
     primeiro = p;
 }
 
-void Cluster::insereFinal(int val)
+void Cluster::insereFinal(int id, float nodeWeight, float edgeWeight)
 {
-    No *t = new No();
-    t->setInfo(val);
-    t->setProx(NULL);
+    ClusterNode *t = new ClusterNode();
+    t->setId(id);
+    t->setProx(nullptr);
+    this->actualLimit += nodeWeight;
+    this->sumEdges += edgeWeight;
 
-    if (primeiro != NULL){
-        No *p;
-        for (p = primeiro; p->getProx() != NULL; p = p->getProx());
+    if (primeiro != nullptr){
+        ClusterNode *p;
+        for (p = primeiro; p->getProx() != nullptr; p = p->getProx());
         p->setProx(t);
 
     }
@@ -51,9 +55,9 @@ void Cluster::insereFinal(int val)
 
 void Cluster::removeInicio()
 {
-    if(primeiro != NULL)
+    if(primeiro != nullptr)
     {
-        No *p = primeiro;
+        ClusterNode *p = primeiro;
 
         primeiro = primeiro->getProx();
 
@@ -63,18 +67,18 @@ void Cluster::removeInicio()
 
 void Cluster::removeFinal()
 {
-    if (primeiro != NULL){
+    if (primeiro != nullptr){
 
-        No *ap = NULL, *p;
-        for (p = primeiro; p->getProx() != NULL; p = p->getProx()){
+        ClusterNode *ap = nullptr, *p;
+        for (p = primeiro; p->getProx() != nullptr; p = p->getProx()){
             ap = p;
         }
 
-        if (ap == NULL){ // lista com 1 nó
-            primeiro = NULL;
+        if (ap == nullptr){ // lista com 1 nó
+            primeiro = nullptr;
         }
         else{
-            ap->setProx(NULL);
+            ap->setProx(nullptr);
         }
         delete p;
     }
@@ -82,11 +86,18 @@ void Cluster::removeFinal()
 
 void Cluster::imprimir()
 {
-    No *p = primeiro;
-    while(p != NULL)
+    ClusterNode *p = primeiro;
+    while(p != nullptr)
     {
-        std::cout<<p->getInfo()<<"    ";
+        //std::cout<<p->getInfo()<<"    ";
         p = p->getProx();
     }
     std::cout<<std::endl<<std::endl<<std::endl;
 }
+
+float Cluster::getLowerLimit() const {return lowerLimit;}
+void Cluster::setLowerLimit(float lowerLimit) {Cluster::lowerLimit = lowerLimit;}
+float Cluster::getHigherLimit() const {return higherLimit;}
+void Cluster::setHigherLimit(float higherLimit) {Cluster::higherLimit = higherLimit;}
+float Cluster::getActualLimit() const {return actualLimit;}
+float Cluster::getSumEdges() const {return sumEdges;}
